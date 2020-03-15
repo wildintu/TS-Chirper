@@ -21,7 +21,7 @@ const Forms: React.FC<IFormsProps> = props => {
         Fetch({
             user: name,
             text: msg
-        })
+        }, '/api/chirps', 'POST')
     }
   }
 

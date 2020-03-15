@@ -25,6 +25,7 @@
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -37,7 +38,6 @@
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4",
     "npm-run-all": "^4.1.3"
   }
 }

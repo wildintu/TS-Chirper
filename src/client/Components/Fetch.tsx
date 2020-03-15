@@ -1,9 +1,9 @@
 
-let Fetch = async (chirps: object) => {
+let Fetch = async (chirps: object, url: string, methodtype: string) => {
     console.log(chirps);
   try {
-      let response = await fetch('/api/chirps', {
-          method: 'POST',
+      let response = await fetch(url, {
+          method: methodtype,
           mode: 'cors',
           cache: 'no-cache',
           credentials: 'same-origin',

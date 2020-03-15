@@ -21,12 +21,11 @@ const Chirps: React.FC<IChirpsProps> = props => {
     }
   };
 
-  let handleClick = () => {
-	console.log({ SingleChirp })
-    alert('details');
-  };
+//   let handleClick = () => {
+// 	{ SingleChirp }
+//   };
 
-  let chirpArray = (chirp: string[]) => {
+  let chirpArray = (chirp: any) => {
     let keys = Object.keys(chirp);
     let arr = keys.map(element => {
       return chirp[element];
@@ -40,13 +39,13 @@ const Chirps: React.FC<IChirpsProps> = props => {
           <div className="card-body">
             <h5 className="card-title">{element.user}</h5>
             <p className="card-text">{element.text}</p>
-            <Link to="/SingleChirp">
+            <Link to={`/SingleChirp/${keys[index]}/admin`}>
               <button
                 type="button"
                 className="btn btn-info"
-                onClick={() => {
-                  handleClick();
-                }}
+                // onClick={() => {
+                //   handleClick();
+                // }}
               >
                 Admin Settings
               </button>

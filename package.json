@@ -24,6 +24,7 @@
     "css-loader": "^1.0.1",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
+    "minimist": "^1.2.2",
     "node-sass": "^4.13.1",
     "nodemon": "^2.0.2",
     "react": "^16.12.0",

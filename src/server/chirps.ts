@@ -3,10 +3,6 @@ import chirpsStore from './chirpstore';
 
 const router = express.Router();
 
-// router.get('/api/hello', (req, res, next) => {
-//     res.json('World');
-// });
-
 router.get('/api/chirps/:id?', (req, res) => {
     let id = req.params.id;
     if(id) {
@@ -36,7 +32,7 @@ router.delete('/api/chirps/:id?', (req,res) => {
     if(id) {
         res.json(chirpsStore.DeleteChirp(id));
     } else {
-        res.send(chirpsStore.DeleteChirps());
+        res.send(chirpsStore.DeleteChirp());
     }
 })
 

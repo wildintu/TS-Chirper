@@ -8,7 +8,7 @@
       "allowSyntheticDefaultImports": true,
       "allowJs": true,
       "lib":[
-          "es2015", "dom"
+          "es2015", "dom", "ES2017.Object"
       ]
     },
     "include": [

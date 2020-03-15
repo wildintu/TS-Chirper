@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import SingleChirp from "./SingleChirp"
+import SingleChirp from "./SingleChirp";
 
 const Chirps: React.FC<IChirpsProps> = props => {
   /* constructor(props) {
@@ -21,9 +21,9 @@ const Chirps: React.FC<IChirpsProps> = props => {
     }
   };
 
-//   let handleClick = () => {
-// 	{ SingleChirp }
-//   };
+  //   let handleClick = () => {
+  // 	{ SingleChirp }
+  //   };
 
   let chirpArray = (chirp: any) => {
     let keys = Object.keys(chirp);

@@ -3,28 +3,29 @@ import { Link } from "react-router-dom";
 import Fetch from "./Fetch";
 
 const Forms: React.FC<IFormsProps> = props => {
-  const [name, setName] = useState('');
-  const [msg, setMsg] = useState('');
+  const [name, setName] = useState("");
+  const [msg, setMsg] = useState("");
 
-  
-
-  let handleChange = (e: string,id: string) => {
-    if(id === "name") {
-        setName(e)
+  let handleChange = (e: string, id: string) => {
+    if (id === "name") {
+      setName(e);
     } else if (id === "msg") {
-        setMsg(e)
+      setMsg(e);
     }
-  }
+  };
 
   let handleClick = () => {
     if (name !== "" && msg !== "") {
-        Fetch({
-            user: name,
-            text: msg
-        }, '/api/chirps', 'POST')
+      Fetch(
+        {
+          user: name,
+          text: msg
+        },
+        "/api/chirps",
+        "POST"
+      );
     }
-  }
-
+  };
 
   return (
     <form>
@@ -34,7 +35,7 @@ const Forms: React.FC<IFormsProps> = props => {
           type="text"
           className="form-control"
           id="name"
-          value={ name }
+          value={name}
           onChange={e => handleChange(e.target.value, "name")}
         />
         <small id="nameMsg" className="form-text text-muted">
@@ -47,16 +48,19 @@ const Forms: React.FC<IFormsProps> = props => {
           type="text"
           className="form-control"
           id="msg"
-          value ={ msg }
+          value={msg}
           onChange={e => handleChange(e.target.value, "msg")}
         />
       </div>
       <Link to="/">
-      <button className="btn btn-primary ml-3" onClick={() => {
-          handleClick();
-      }}>
-        Submit
-      </button>
+        <button
+          className="btn btn-primary ml-3"
+          onClick={() => {
+            handleClick();
+          }}
+        >
+          Submit
+        </button>
       </Link>
     </form>
   );

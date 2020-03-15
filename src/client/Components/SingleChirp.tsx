@@ -20,28 +20,36 @@ let SingleChirp: React.FC<ISingleChirpProps> = ({
 
   let handleClick = () => {
     if (name !== "name" && msg !== "msg") {
-      Fetch({
-        user: name,
-        text: msg
-      }, `/api/chirps/${id}`, 'PUT');
+      Fetch(
+        {
+          user: name,
+          text: msg
+        },
+        `/api/chirps/${id}`,
+        "PUT"
+      );
     }
   };
 
   let handleDelete = () => {
     if (name !== "name" && msg !== "msg") {
-      Fetch({
-        user: name,
-        text: msg
-      }, `/api/chirps/${id}`, 'DELETE');
+      Fetch(
+        {
+          user: name,
+          text: msg
+        },
+        `/api/chirps/${id}`,
+        "DELETE"
+      );
     }
   };
 
   let chirpChirp = async () => {
     try {
-        let res = await fetch(`/api/chirps/${id}/`);
-        let achirp = await res.json();
-        setName(achirp.user);
-        setMsg(achirp.text);
+      let res = await fetch(`/api/chirps/${id}/`);
+      let achirp = await res.json();
+      setName(achirp.user);
+      setMsg(achirp.text);
     } catch (error) {
       console.log(error);
     }
@@ -59,8 +67,8 @@ let SingleChirp: React.FC<ISingleChirpProps> = ({
           type="text"
           className="form-control"
           id="name"
-            value={ name }
-            onChange={e => handleChange(e.target.value, "name")}
+          value={name}
+          onChange={e => handleChange(e.target.value, "name")}
         />
         <small id="nameMsg" className="form-text text-muted">
           We plan to stalk you.
@@ -72,8 +80,8 @@ let SingleChirp: React.FC<ISingleChirpProps> = ({
           type="text"
           className="form-control"
           id="msg"
-            value ={ msg }
-            onChange={e => handleChange(e.target.value, "msg")}
+          value={msg}
+          onChange={e => handleChange(e.target.value, "msg")}
         />
       </div>
       <Link to="/">

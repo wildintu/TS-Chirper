@@ -1,1 +1,5 @@
-{"0":{"user":"Carl","text":"Woof"},"1":{"user":"Ringo","text":"Woof"},"nextid":9}
+{
+  "0": { "user": "Carl", "text": "Woof" },
+  "1": { "user": "Ringo", "text": "Woof" },
+  "nextid": 9
+}
